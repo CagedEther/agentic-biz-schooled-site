@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Agentic Schooled"
+version = "1.0.0"
+id = "artifacts/agentic-schooled"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20905
+
+[services.development]
+run = "pnpm --filter @workspace/agentic-schooled run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/agentic-schooled", "run", "build" ]
+publicDir = "artifacts/agentic-schooled/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20905"
+BASE_PATH = "/"
