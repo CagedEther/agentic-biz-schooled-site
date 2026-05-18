@@ -14,9 +14,9 @@ export function LessonPage() {
 
   useEffect(() => {
     if (lesson) {
-      document.title = `${lesson.title} — Agentic Schooled`;
+      document.title = `${lesson.title} — Agentic Business Schooled`;
     } else {
-      document.title = "Lesson not found — Agentic Schooled";
+      document.title = "Lesson not found — Agentic Business Schooled";
     }
   }, [lesson]);
 

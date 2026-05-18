@@ -13,9 +13,9 @@ export function CategoryPage() {
 
   useEffect(() => {
     if (category) {
-      document.title = `${category.label} — Agentic Schooled`;
+      document.title = `${category.label} — Agentic Business Schooled`;
     } else {
-      document.title = "Category not found — Agentic Schooled";
+      document.title = "Category not found — Agentic Business Schooled";
     }
   }, [category]);
 

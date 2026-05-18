@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="relative mt-24 border-t border-border">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 py-14 lg:grid-cols-4 lg:px-10">
         <div className="lg:col-span-2">
-          <h3 className="font-display text-2xl neon-text">Agentic Schooled</h3>
+          <h3 className="font-display text-2xl"><span className="neon-text">Agentic</span> Business Schooled</h3>
           <p className="mt-3 max-w-md text-sm text-muted-foreground">
             The unconventional curriculum for builders who'd rather ship an agent than read another textbook.
           </p>
@@ -27,7 +27,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-6 text-xs text-muted-foreground lg:flex-row lg:px-10">
-          <p>© {new Date().getFullYear()} Agentic Schooled. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Agentic Business Schooled. All rights reserved.</p>
           <p className="font-mono">// keep the sign humming</p>
         </div>
       </div>

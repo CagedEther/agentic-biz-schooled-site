@@ -3,7 +3,7 @@ import { Link } from "wouter";
 
 export default function NotFound() {
   useEffect(() => {
-    document.title = "404 — Agentic Schooled";
+    document.title = "404 — Agentic Business Schooled";
   }, []);
 
   return (

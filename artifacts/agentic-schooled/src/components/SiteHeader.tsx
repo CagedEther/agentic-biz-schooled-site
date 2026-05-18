@@ -31,7 +31,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
         <Link href="/" className="group flex items-center gap-2">
           <span className="font-display text-xl font-semibold tracking-tight text-foreground">
-            Agentic <span className="italic neon-text">Schooled</span>
+            <span className="neon-text">Agentic</span> Business <span className="italic">Schooled</span>
           </span>
         </Link>
 

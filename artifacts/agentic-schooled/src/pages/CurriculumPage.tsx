@@ -6,7 +6,7 @@ import { categories, getLessonsByCategory } from "@/data/curriculum";
 
 export function CurriculumPage() {
   useEffect(() => {
-    document.title = "Curriculum — Agentic Schooled";
+    document.title = "Curriculum — Agentic Business Schooled";
   }, []);
 
   return (

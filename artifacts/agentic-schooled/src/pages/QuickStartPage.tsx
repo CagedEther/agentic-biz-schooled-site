@@ -39,7 +39,7 @@ export function QuickStartPage() {
   const [result, setResult] = useState<Section[] | null>(null);
 
   useEffect(() => {
-    document.title = "Quick Start — Test a business idea with an agent | Agentic Schooled";
+    document.title = "Quick Start — Test a business idea with an agent | Agentic Business Schooled";
   }, []);
 
   const onSubmit = (e: React.FormEvent) => {

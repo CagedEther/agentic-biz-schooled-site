@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 
 export function AboutPage() {
   useEffect(() => {
-    document.title = "About — Agentic Schooled";
+    document.title = "About — Agentic Business Schooled";
   }, []);
 
   return (

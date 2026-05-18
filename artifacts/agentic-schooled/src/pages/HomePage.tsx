@@ -34,7 +34,7 @@ const featuredLessons = [
 
 export function HomePage() {
   useEffect(() => {
-    document.title = "Agentic Schooled — Learn to build, ship, and test AI agents";
+    document.title = "Agentic Business Schooled — Learn to build, ship, and test AI agents";
   }, []);
 
   return (
@@ -56,7 +56,8 @@ export function HomePage() {
             </p>
             <h1 className="mt-6 font-display text-5xl font-semibold leading-[0.95] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               Welcome to{" "}
-              <span className="neon-text animate-hum">Agentic Schooled</span>, the curriculum for
+              <span className="neon-text animate-hum">Agentic</span> Business{" "}
+              <span className="animate-hum" style={{ color: "inherit" }}>Schooled</span>, the curriculum for
               builders who'd rather <em className="text-muted-foreground">ship an agent</em> than
               read another textbook.
             </h1>
