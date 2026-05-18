@@ -23,8 +23,8 @@ export function AboutPage() {
 
         <div className="prose-invert mt-10 space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
-            Agentic Schooled was started by builders who got tired of two things: AI content that
-            mistook a Twitter thread for a curriculum, and business advice that ignored what's
+            Agentic Business Schooled was started by builders who got tired of two things: AI content
+            that mistook a Twitter thread for a curriculum, and business advice that ignored what's
             actually changed in the last 24 months.
           </p>
           <p>
