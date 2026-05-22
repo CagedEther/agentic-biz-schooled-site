@@ -1,0 +1,384 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const allPages = await getCollection('pages');
+const navPages = allPages
+  .sort((a, b) => a.data.order - b.data.order);
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} — Agentic Schooled</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="logo">Agentic<span>Schooled</span></a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            {navPages.map((page) => {
+              const href = page.data.path === '/' ? '/' : page.data.path;
+              const isActive = currentPath === href || (href !== '/' && currentPath.startsWith(href));
+              return (
+                <li>
+                  <a href={href} class={isActive ? 'active' : ''}>{page.data.title}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Agentic Schooled — built in public. Content in <code>/src/content/pages</code>.</p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById('nav-toggle');
+      const nav = document.getElementById('site-nav');
+      toggle?.addEventListener('click', () => {
+        nav?.classList.toggle('open');
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --color-bg: #0d0f14;
+    --color-surface: #13161e;
+    --color-border: #1e2330;
+    --color-accent: #7c6af7;
+    --color-accent-dim: #4b3fd4;
+    --color-text: #e2e4ec;
+    --color-text-muted: #7a7f94;
+    --color-heading: #ffffff;
+    --color-link: #a89df8;
+    --color-code-bg: #181b24;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+    --radius: 8px;
+    --max-width: 860px;
+    --header-height: 64px;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+  }
+
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.875em;
+    background: var(--color-code-bg);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    color: var(--color-accent);
+  }
+
+  pre {
+    background: var(--color-code-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    overflow-x: auto;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  pre code {
+    background: none;
+    padding: 0;
+    color: var(--color-text);
+  }
+
+  /* Layout */
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Header */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-height);
+    background: rgba(13, 15, 20, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    letter-spacing: -0.02em;
+    text-decoration: none;
+  }
+
+  .logo span {
+    color: var(--color-accent);
+  }
+
+  .site-nav ul {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    transition: color 0.15s, background 0.15s;
+    text-decoration: none;
+  }
+
+  .site-nav a:hover,
+  .site-nav a.active {
+    color: var(--color-text);
+    background: var(--color-border);
+  }
+
+  .site-nav a.active {
+    color: var(--color-accent);
+  }
+
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: opacity 0.2s;
+  }
+
+  /* Main content */
+  .site-main {
+    flex: 1;
+  }
+
+  /* Footer */
+  .site-footer {
+    border-top: 1px solid var(--color-border);
+    padding: 2rem 0;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+
+  /* Prose (rendered Markdown) */
+  .prose {
+    max-width: 100%;
+  }
+
+  .prose h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--color-heading);
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+
+  .prose h2 {
+    font-size: clamp(1.25rem, 3vw, 1.625rem);
+    font-weight: 700;
+    color: var(--color-heading);
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .prose h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-heading);
+    margin-top: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose p {
+    margin-bottom: 1.1rem;
+    color: var(--color-text);
+  }
+
+  .prose ul, .prose ol {
+    margin-bottom: 1.1rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.35rem;
+  }
+
+  .prose strong {
+    color: var(--color-heading);
+    font-weight: 600;
+  }
+
+  .prose hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 2.5rem 0;
+  }
+
+  .prose blockquote {
+    border-left: 3px solid var(--color-accent);
+    padding: 0.75rem 1.25rem;
+    background: var(--color-surface);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 1.5rem 0;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .prose th {
+    text-align: left;
+    padding: 0.6rem 0.9rem;
+    background: var(--color-surface);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .prose td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  .prose tr:last-child td {
+    border-bottom: none;
+  }
+
+  .prose img {
+    display: block;
+    margin: 2rem auto;
+    max-height: 320px;
+    object-fit: contain;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .nav-toggle {
+      display: flex;
+    }
+
+    .site-nav {
+      display: none;
+      position: absolute;
+      top: var(--header-height);
+      left: 0;
+      right: 0;
+      background: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      padding: 1rem 1.5rem;
+    }
+
+    .site-nav.open {
+      display: block;
+    }
+
+    .site-nav ul {
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .site-nav a {
+      font-size: 1rem;
+      padding: 0.6rem 0.75rem;
+    }
+  }
+</style>

@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const allPages = await getCollection('pages');
+const homePage = allPages.find((p) => p.data.path === '/');
+
+if (!homePage) {
+  throw new Error('No home page found in content/pages with slug: /');
+}
+
+const { Content } = await homePage.render();
+const { title, description } = homePage.data;
+---
+
+<Layout title={title} description={description}>
+  <article class="container page-content">
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .page-content {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+</style>

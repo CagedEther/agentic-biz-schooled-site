@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280" width="800" height="280">
+  <rect width="800" height="280" fill="#13161e" rx="8"/>
+  <!-- Stats blocks -->
+  <rect x="80" y="60" width="160" height="140" rx="8" fill="#0d0f14" stroke="#7c6af7" stroke-width="1.5"/>
+  <text x="160" y="115" text-anchor="middle" fill="#a89df8" font-family="monospace" font-size="40" font-weight="800">12</text>
+  <text x="160" y="145" text-anchor="middle" fill="#7a7f94" font-family="monospace" font-size="12">lessons</text>
+  <rect x="320" y="60" width="160" height="140" rx="8" fill="#0d0f14" stroke="#4b3fd4" stroke-width="1.5"/>
+  <text x="400" y="115" text-anchor="middle" fill="#a89df8" font-family="monospace" font-size="40" font-weight="800">01</text>
+  <text x="400" y="145" text-anchor="middle" fill="#7a7f94" font-family="monospace" font-size="12">sandbox</text>
+  <rect x="560" y="60" width="160" height="140" rx="8" fill="#0d0f14" stroke="#7c6af7" stroke-width="1.5"/>
+  <text x="640" y="115" text-anchor="middle" fill="#a89df8" font-family="monospace" font-size="40" font-weight="800">00</text>
+  <text x="640" y="145" text-anchor="middle" fill="#7a7f94" font-family="monospace" font-size="12">filler</text>
+  <text x="400" y="240" text-anchor="middle" fill="#7a7f94" font-size="12" font-family="monospace">built in public · content in Markdown</text>
+</svg>
