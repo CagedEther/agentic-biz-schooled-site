@@ -2,38 +2,28 @@
 title: Home
 path: /
 order: 1
-description: Agentic Business Schooled — learn to build AI agents that do real work
-heroImage: hero.svg
+description: The curriculum for builders who'd rather ship an agent than read another textbook
 ---
 
-# Agentic Business Schooled
+> **Got a business idea? Let an agent take it apart.**
+>
+> Drop in a one-paragraph proposition. The agent will identify the customer, the wedge, the unit economics worth questioning, and three things that will probably kill it. Useful in about 90 seconds.
+>
+> [Open the sandbox →](/quick-start)
 
-You don't learn to build agents by reading about them.
+## Lessons you won't find in a textbook.
 
-You learn by pointing one at a messy problem and watching what breaks.
+- **01 — What is an agent, really?** Strip away the hype. A working definition you can actually build against.
+- **02 — Tools, memory, and the loop** The three primitives behind every agent worth shipping.
+- **03 — Models as components** Choosing a model is an architecture decision, not a vibe.
+- **04 — Designing the tool surface** Bad tools = bad agents. How to design ones an LLM can actually wield.
 
-![Hero image showing agent workflow](/images/hero.svg)
-
-## What this is
-
-A no-filler curriculum for builders who want to ship agents that actually work in the real world. Twelve lessons. One sandbox. Zero hand-waving.
-
-Every lesson ends with a concrete action you can take today.
-
-## Who it's for
-
-- Founders who want to automate their own operations before hiring
-- Operators who see where AI can eliminate a whole category of grunt work
-- Engineers who want to move beyond demos into production systems
-
-## Where to start
-
-If you're brand new, go to the [Curriculum](/curriculum) and start at Lesson 1. If you already know the basics and want to test an idea, head straight to [Quick Start](/quick-start).
-
-## The one rule
-
-Every lesson must leave you with something you can actually do. No theory without practice. No concept without a real use case attached.
+[See all lessons →](/curriculum)
 
 ---
 
-Ready? [Start the curriculum →](/curriculum)
+## The thesis
+
+You don't learn to build agents by *reading about agents*. You learn by pointing one at a messy problem and watching what breaks.
+
+That's the whole school. Lessons on the left, sandbox on the right.

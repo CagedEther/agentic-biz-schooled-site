@@ -18,7 +18,10 @@ const { title, description } = page.data;
 ---
 
 <Layout title={title} description={description}>
-  <article class="container page-content">
+  <article class="container page-article">
+    <header class="page-header">
+      <div class="page-label">— {title}</div>
+    </header>
     <div class="prose">
       <Content />
     </div>
@@ -26,8 +29,21 @@ const { title, description } = page.data;
 </Layout>
 
 <style>
-  .page-content {
+  .page-article {
     padding-top: 4rem;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
+  }
+
+  .page-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .page-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pink-bright);
+    margin-bottom: 0.5rem;
   }
 </style>
