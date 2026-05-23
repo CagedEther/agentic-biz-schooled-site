@@ -2,28 +2,51 @@
 title: Home
 path: /
 order: 1
-description: The curriculum for builders who'd rather ship an agent than read another textbook
+description: A plain-spoken guide to agentic AI for builders, operators, and business leaders.
 ---
 
-> **Got a business idea? Let an agent take it apart.**
->
-> Drop in a one-paragraph proposition. The agent will identify the customer, the wedge, the unit economics worth questioning, and three things that will probably kill it. Useful in about 90 seconds.
->
-> [Open the sandbox →](/quick-start)
+## What You Will Learn
 
-## Lessons you won't find in a textbook.
+## The Big Shift
 
-- **01 — What is an agent, really?** Strip away the hype. A working definition you can actually build against.
-- **02 — Tools, memory, and the loop** The three primitives behind every agent worth shipping.
-- **03 — Models as components** Choosing a model is an architecture decision, not a vibe.
-- **04 — Designing the tool surface** Bad tools = bad agents. How to design ones an LLM can actually wield.
+The app economy was built around destinations. Each product tried to own the user's attention, interface, data, and workflow.
 
-[See all lessons →](/curriculum)
+The agentic economy is built around capabilities. Specialized services can be discovered, called, combined, and paid for as part of a larger task. A personal or business agent becomes the orchestration layer that turns intent into execution.
+
+In that world, the most important question is no longer *"Which app do I open?"* It becomes *"What outcome do I want, and which agents or tools are trusted to help produce it?"*
+
+## Who This Is For
+
+This guide is for builders, operators, founders, students, and business leaders who want to understand agentic AI without getting lost in hype or the tech.
+
+You do not need to have a strong technical background. Neither will you start by building a fully autonomous company. The best first step is smaller: choose one workflow, give an agent limited authority, keep a human in the loop, and learn what it takes to make the work reliable.
 
 ---
 
-## The thesis
+## Why Agentic AI
 
-You don't learn to build agents by *reading about agents*. You learn by pointing one at a messy problem and watching what breaks.
+Agentic AI matters because it changes the basic unit of software from the response to the completed task.
 
-That's the whole school. Lessons on the left, sandbox on the right.
+[Read: Why Agentic AI →](/curriculum)
+
+## Build Your First AI Agent
+
+The best way to learn is to build. See how you can create an AI agent in 15 minutes using Replit for building and hosting, and Blocks to share your agent with the world.
+
+[Read: Build Your First Agent →](/quick-start)
+
+## The Agentic Economy
+
+The agentic economy represents a shift from humans manually operating software interfaces to autonomous agents coordinating tasks across systems to achieve defined business goals.
+
+[Read: The Agentic Economy →](/lessons#the-agentic-economy)
+
+## Agentic AI and Jobs
+
+Agentic AI will transform how work is done by shifting humans from executing repetitive tasks to designing, supervising, and managing workflows that agents execute, creating new roles along the way.
+
+[Read: Agentic AI and Jobs →](/lessons#agentic-ai-and-jobs)
+
+---
+
+So what are you waiting for? Get dug in and see what agentic business can do for you.

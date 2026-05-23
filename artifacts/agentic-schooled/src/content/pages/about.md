@@ -2,45 +2,27 @@
 title: About
 path: /about
 order: 5
-description: Why this exists and who made it
-heroImage: about.svg
+description: A collective of business people, technologists, and academics writing for business students who want to understand how AI is transforming business.
 ---
 
 # About
 
-This started as a set of notes.
+Agentic Business Schooled is written by a small collective of business people, technologists, and academics.
 
-![About page illustration](/images/about.svg)
+We come from different starting points — boardrooms, engineering teams, and university classrooms — but we share a frustration with how agentic AI is usually explained. The hype obscures the work. The technical detail loses the business reader. The business framing skips over what an agent actually *is*.
 
-Every time someone asked "where do I start with agents?" there was no good answer. The existing content was either too abstract (academic papers, theory-heavy blog posts) or too specific (tutorials for one particular framework that would be obsolete in six months).
+This site is our attempt to fix that.
 
-What was missing was a curriculum built around **judgment** — the ability to look at a problem and know whether an agent is the right tool, how to structure it, and how to know if it's actually working.
+## Who it's for
 
-## The one rule
+It's written primarily for **business students** and early-career operators who want to understand how AI is transforming business — what's real, what's still aspirational, and what it means for the way companies create value, organize work, and compete.
 
-Every lesson must leave you with something you can actually do.
+You don't need a technical background. You just need to be willing to think clearly about workflows, incentives, and outcomes.
 
-No theory without practice. No concept without a real use case attached. If a lesson can't pass that test, it doesn't belong here.
+## What we try to do
 
-## What's here
+- Explain agentic AI in plain language, without skipping the parts that matter.
+- Connect the technology to the business decisions it actually changes.
+- Give you something to *do* — a small agent to build, a workflow to redesign, a framework to apply — not just something to read.
 
-- **12 lessons** across 4 tracks
-- **1 sandbox** for testing ideas against an agent in real time
-- **0 filler** — no padding, no prerequisite fluff, no "in this lesson we will learn"
-
-## Stats
-
-| | |
-|---|---|
-| Lessons | 12 |
-| Tracks | 4 |
-| Sandbox tools | 1 |
-| Filler | 0 |
-
-## How to contribute
-
-This site is powered by Markdown files. If you want to suggest a correction, add a lesson, or improve an example — the content lives in `/src/content/pages`. Fork it, edit the Markdown, and open a pull request.
-
----
-
-[Start learning →](/curriculum)
+If you're a business student trying to make sense of where this is all going, you're in the right place. Start with [Why Agentic AI](/curriculum), then go [build your first agent](/quick-start).

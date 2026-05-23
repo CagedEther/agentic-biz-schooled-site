@@ -1,10 +1,3 @@
----
-title: Quick Start
-path: /quick-start
-order: 3
-description: Build your first AI agent in 15 minutes using Replit and Blocks — no code required.
----
-
 # Build Your First Agent
 
 This quickstart will help you build a small AI agent with Replit and publish it to the Blocks network, which makes it easy to distribute and be used by another agent.
@@ -13,7 +6,7 @@ The goal is not to become a developer in one session. The goal is to see that an
 
 ## What You Are Building
 
-You will build the **5-Year-Old Translator**: an agent that takes confusing jargon and explains it like a patient kindergarten teacher.
+You will build the 5-Year-Old Translator: an agent that takes confusing jargon and explains it like a patient kindergarten teacher.
 
 The agent has one input:
 
@@ -31,7 +24,7 @@ Example output:
 
 > We need to use our best block-building skills to make the coolest sandbox castle before recess is over!
 
-So we're building the AI agent with simple instructions: you will not have to write any code.
+So we're building the AI agent with simple instructions: you will not have to write any code. 
 
 ## Before You Start
 
@@ -88,7 +81,7 @@ This prompt tells Replit what to build, how the agent should behave, what the si
 
 Replit should use its own AI providers. If Replit asks for an API key for your AI model, check the FAQ at the end of this guide.
 
-This stage can now take a few minutes to complete.
+This stage can now take a few minutes to complete. 
 
 If you see the app created but Replit asks you to run commands like this:
 
@@ -106,7 +99,11 @@ Ask Replit to execute them for you with a prompt like:
 go ahead and publish to blocks
 ```
 
-Give it a go and see how it works! Here's an example you can use:
+You should now see a completed app like this in the preview: 
+
+[Image]
+
+Give it a go and see how it works! Here's an example you can use: 
 
 ```text
 The legacy monolithic architecture needs to be refactored into decoupled microservices to improve fault tolerance and horizontally scale the containerized workloads.
@@ -159,7 +156,7 @@ The 5-Year-Old Translator could be called by another agent in an agent-to-agent 
 - It sends the paragraph to the 5-Year-Old Translator as `original_text`.
 - The translator returns a simpler explanation.
 - A training-materials agent uses that explanation to create a presentation slide.
-- This can be run as a loop so that the system moves through a large body of technical text, turning each section into a separate easy-to-understand slide.
+- This can be run as a loop so that the system moves through a large body of technical text, turning each section into a separate easy-to-understand slide. 
 
 This is why the input and output shape matters. If other agents know what your agent accepts and returns, they can use it as one useful capability inside a larger workflow.
 
