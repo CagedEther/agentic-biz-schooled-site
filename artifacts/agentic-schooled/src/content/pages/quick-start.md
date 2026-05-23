@@ -3,6 +3,7 @@ title: Quick Start
 path: /quick-start
 order: 3
 description: Build your first AI agent in 15 minutes using Replit and Blocks — no code required.
+hideFromNav: true
 ---
 
 # Build Your First Agent

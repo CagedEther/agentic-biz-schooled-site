@@ -3,6 +3,7 @@ title: Lessons
 path: /lessons
 order: 4
 description: Two lessons on how the agentic economy works — and how it will reshape jobs and organizations.
+hideFromNav: true
 ---
 
 # Lessons

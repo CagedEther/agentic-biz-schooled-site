@@ -8,6 +8,7 @@ const pages = defineCollection({
     order: z.number(),
     description: z.string(),
     heroImage: z.string().optional(),
+    hideFromNav: z.boolean().optional(),
   }),
 });
 

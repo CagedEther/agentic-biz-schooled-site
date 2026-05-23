@@ -9,7 +9,9 @@ interface Props {
 const { title, description } = Astro.props;
 
 const allPages = await getCollection('pages');
-const navPages = allPages.sort((a, b) => a.data.order - b.data.order);
+const navPages = allPages
+  .filter((p) => !p.data.hideFromNav)
+  .sort((a, b) => a.data.order - b.data.order);
 
 const currentPath = Astro.url.pathname;
 ---
