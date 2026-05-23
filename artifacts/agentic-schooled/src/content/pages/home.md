@@ -5,7 +5,7 @@ order: 1
 description: A plain-spoken guide to agentic AI for builders, operators, and business leaders.
 ---
 
-## What You Will Learn
+# What You Will Learn
 
 ## The Big Shift
 
@@ -21,31 +21,29 @@ This guide is for builders, operators, founders, students, and business leaders 
 
 You do not need to have a strong technical background. Neither will you start by building a fully autonomous company. The best first step is smaller: choose one workflow, give an agent limited authority, keep a human in the loop, and learn what it takes to make the work reliable.
 
----
-
 ## Why Agentic AI
 
 Agentic AI matters because it changes the basic unit of software from the response to the completed task.
 
-[Read: Why Agentic AI →](/curriculum)
+[Dig into the why →](/curriculum)
 
 ## Build Your First AI Agent
 
 The best way to learn is to build. See how you can create an AI agent in 15 minutes using Replit for building and hosting, and Blocks to share your agent with the world.
 
-[Read: Build Your First Agent →](/quick-start)
+[Get started →](/quick-start)
 
 ## The Agentic Economy
 
 The agentic economy represents a shift from humans manually operating software interfaces to autonomous agents coordinating tasks across systems to achieve defined business goals.
 
-[Read: The Agentic Economy →](/lessons#the-agentic-economy)
+[See how the economy works →](/lessons#the-agentic-economy)
 
 ## Agentic AI and Jobs
 
 Agentic AI will transform how work is done by shifting humans from executing repetitive tasks to designing, supervising, and managing workflows that agents execute, creating new roles along the way.
 
-[Read: Agentic AI and Jobs →](/lessons#agentic-ai-and-jobs)
+[Understand what changes for work →](/lessons#agentic-ai-and-jobs)
 
 ---
 

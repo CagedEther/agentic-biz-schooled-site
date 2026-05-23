@@ -48,7 +48,7 @@ const currentPath = Astro.url.pathname;
               );
             })}
           </ul>
-          <a href="/quick-start" class="nav-cta">Launch agent →</a>
+          <a href="/quick-start" class="nav-cta">Build your first AI Agent →</a>
         </nav>
       </div>
     </header>
@@ -633,23 +633,11 @@ const currentPath = Astro.url.pathname;
     margin-bottom: 0.2rem;
   }
 
-  /* Thesis section */
-  .home-prose h2:last-of-type {
-    display: none;
-  }
-
-  .home-prose hr + h2 {
-    display: block;
-    text-align: center;
-    font-size: clamp(1.6rem, 4vw, 2.4rem);
-    margin-top: 2.5rem;
-  }
-
-  .home-prose hr + h2 + p {
+  /* Closing line after final hr */
+  .home-prose hr + p {
     text-align: center;
     max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2.5rem auto 0;
     font-size: 1rem;
     color: var(--muted);
   }
